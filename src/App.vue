@@ -12,6 +12,24 @@
   </div>
 </template>
 
+<script>
+import * as moment from "moment";
+import { setTimeout, setInterval } from "timers";
+
+export default {
+  data() {
+    return {
+      time: null
+    };
+  },
+  mounted() {
+    setInterval(() => {
+      this.time = moment().format("MMM Do, h:mm:ss a");
+    }, 1000);
+  }
+};
+</script>
+
 <style>
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
