@@ -22,8 +22,6 @@
 </template>
 
 <script>
-import Modal from "./Modal.vue";
-
 export default {
   name: "todolist",
   data() {
@@ -46,10 +44,33 @@ export default {
   computed: {
     todoList() {
       return this.$store.state.todos;
-  }
+    }
   }
 };
 </script>
 
 <style scoped>
+.todo-list {
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  background-color: rgb(58, 85, 107);
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 50rem;
+}
+
+table tbody tr th {
+  font-size: 1.2rem;
+
+  color: rgb(52, 115, 151);
+}
+
+td {
+  border: solid 1px rgb(44, 71, 83);
+  text-align: left;
+}
 </style>
