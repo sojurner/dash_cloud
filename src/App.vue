@@ -3,6 +3,10 @@
     <div id="nav">
       <router-link to="/">Home</router-link>|
       <router-link to="/work">Work</router-link>
+      <div class="time">
+        <h3>{{time.slice(0,time.indexOf(','))}}</h3>
+        <h4>{{time.slice(time.indexOf(',') + 1)}}</h4>
+    </div>
     </div>
     <router-view/>
   </div>
