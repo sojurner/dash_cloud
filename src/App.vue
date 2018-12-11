@@ -6,7 +6,7 @@
       <div class="time">
         <h3>{{time.slice(0,time.indexOf(','))}}</h3>
         <h4>{{time.slice(time.indexOf(',') + 1)}}</h4>
-    </div>
+      </div>
     </div>
     <router-view/>
   </div>
@@ -38,8 +38,16 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-#nav {
-  padding: 30px;
+
+.time {
+  position: absolute;
+  right: 1rem;
+  top: 0rem;
+}
+
+h3,
+h4 {
+  color: white;
 }
 
 #nav a {
