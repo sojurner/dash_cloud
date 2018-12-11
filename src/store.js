@@ -52,6 +52,18 @@ export default new Vuex.Store({
     },
     addTodo(context, todo) {
       context.commit('addTodo', todo);
+    },
+    sortDefault(context, category) {
+      context.commit('sortDefault', category);
+    },
+    sortOther(context, category) {
+      context.commit('sortOther', category);
+    },
+    addLink(context, link) {
+      context.commit('addLink', link);
+    },
+    removeLink(context, id) {
+      context.commit('removeLink', id);
     }
   }
 });
