@@ -14,7 +14,18 @@ export default new Vuex.Store({
     },
     addTodo(state, todo) {
       state.todos = [...state.todos, todo];
+    },
+    sortDefault(state, category) {
+      state.todos = state.todos.sort((a, b) => {
+        if (a[category] > b[category]) {
+          return 1;
     }
+        if (a[category] < b[category]) {
+          return -1;
+        }
+
+        return 0;
+      });
   },
   actions: {
     setPhotos(context, photos) {
