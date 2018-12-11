@@ -1,6 +1,6 @@
 <template>
-  <div class="hello">
-    <h3>Herro</h3>
+  <div class="dashboard-container">
+    <h3 class="dashboard-welcome">Welcome</h3>
   </div>
 </template>
 
@@ -26,5 +26,9 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.dashboard-welcome {
+  color: white;
 }
 </style>
