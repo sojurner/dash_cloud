@@ -2,9 +2,12 @@
   <div class="modal-mask">
     <div class="modal-wrapper">
       <div class="modal-container">
-        <div class="modal-header">Add A Todo</div>
+        <div class="modal-header">
+          <i class="f" :class="type"/>
+        </div>
         <div class="modal-body">
-          <Forms/>
+          <LinkForm v-if="type.includes('link')"/>
+          <TodoForm v-if="type.includes('clipboard')"/>
         </div>
       </div>
     </div>
