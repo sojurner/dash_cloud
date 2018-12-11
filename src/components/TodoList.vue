@@ -43,6 +43,10 @@ export default {
       }
     }
   },
+  computed: {
+    todoList() {
+      return this.$store.state.todos;
+  }
   }
 };
 </script>
