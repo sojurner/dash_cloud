@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link>|
-      <router-link to="/about">Work</router-link>
+      <router-link to="/work">Work</router-link>
     </div>
     <router-view/>
   </div>
@@ -25,7 +25,6 @@
   color: #aca9a9;
   text-decoration-line: none;
   font-size: 2rem;
-  margin: 1rem;
 }
 
 #nav a:hover {
