@@ -26,10 +26,10 @@ import Modal from "./Modal.vue";
 
 export default {
   name: "todolist",
-  components: { Modal },
   data() {
     return {
-      showModal: false
+      keys: ["title", "description", "importance", "category", "date"],
+      sortedKey: ""
     };
   },
   mounted() {
