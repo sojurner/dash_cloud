@@ -6,7 +6,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     photos: [],
-    todos: []
+    todos: [],
+    links: []
   },
   mutations: {
     setPhotos(state, photos) {
@@ -19,14 +20,14 @@ export default new Vuex.Store({
       state.todos = state.todos.sort((a, b) => {
         if (a[category] > b[category]) {
           return 1;
-    }
+        }
         if (a[category] < b[category]) {
           return -1;
         }
 
         return 0;
       });
-  },
+    },
     sortOther(state, category) {
       state.todos = state.todos.sort((a, b) => {
         if (a[category] > b[category]) {
