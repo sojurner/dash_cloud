@@ -27,6 +27,25 @@ export default new Vuex.Store({
         return 0;
       });
   },
+    sortOther(state, category) {
+      state.todos = state.todos.sort((a, b) => {
+        if (a[category] > b[category]) {
+          return -1;
+        }
+        if (a[category] < b[category]) {
+          return 1;
+        }
+
+        return 0;
+      });
+    },
+    addLink(state, link) {
+      state.links = [...state.links, link];
+    },
+    removeLink(state, id) {
+      state.links = state.links.filter(link => link.id !== id);
+    }
+  },
   actions: {
     setPhotos(context, photos) {
       context.commit('setPhotos', photos);
