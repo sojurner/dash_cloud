@@ -12,10 +12,13 @@
 </template>
 
 <script>
-import Forms from "../controllers/Forms.vue";
+import LinkForm from "../controllers/LinkForm.vue";
+import TodoForm from "../controllers/TodoForm.vue";
+
 export default {
   name: "modal",
-  components: { Forms }
+  props: ["type"],
+  components: { LinkForm, TodoForm }
 };
 </script>
 
