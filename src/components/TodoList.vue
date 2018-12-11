@@ -32,14 +32,17 @@ export default {
       sortedKey: ""
     };
   },
-  mounted() {
-    this.$root.$on("openModal", () => {
-      this.showModal = true;
-    });
-
-    this.$root.$on("closeModal", () => {
-      this.showModal = false;
-    });
+  methods: {
+    sortList(key) {
+      if (this.sortedKey !== key) {
+        this.$store.dispatch("sortDefault", key);
+        this.sortedKey = key;
+      } else {
+        this.$store.dispatch("sortOther", key);
+        this.sortedKey = "";
+      }
+    }
+  },
   }
 };
 </script>
