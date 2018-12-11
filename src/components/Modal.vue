@@ -44,19 +44,22 @@ export default {
 }
 
 .modal-container {
-  width: 300px;
+  width: 500px;
+  height: 300px;
   margin: 0px auto;
   padding: 20px 30px;
-  background-color: #fff;
-  border-radius: 2px;
+  background-color: rgb(50, 68, 85);
+
+  border-radius: 0.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.modal-header h3 {
+.modal-header {
+  font-size: 1.5rem;
   margin-top: 0;
-  color: #42b983;
+  color: #77a5b3;
 }
 
 .modal-body {
