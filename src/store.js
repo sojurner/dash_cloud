@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import * as call from './utils/apiCalls';
 
 Vue.use(Vuex);
 
@@ -80,20 +81,20 @@ export default new Vuex.Store({
         commit('setNews', news);
       }
     },
-    addTodo(context, todo) {
-      context.commit('addTodo', todo);
+    addTodo({ commit }, todo) {
+      commit('addTodo', todo);
     },
-    sortDefault(context, category) {
-      context.commit('sortDefault', category);
+    sortDefault({ commit }, category) {
+      commit('sortDefault', category);
     },
-    sortOther(context, category) {
-      context.commit('sortOther', category);
+    sortOther({ commit }, category) {
+      commit('sortOther', category);
     },
-    addLink(context, link) {
-      context.commit('addLink', link);
+    addLink({ commit }, link) {
+      commit('addLink', link);
     },
-    removeLink(context, id) {
-      context.commit('removeLink', id);
+    removeLink({ commit }, id) {
+      commit('removeLink', id);
     }
   }
 });
