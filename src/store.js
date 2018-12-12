@@ -59,14 +59,26 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    setPhotos(context, photos) {
-      context.commit('setPhotos', photos);
+    async setPhotos({ commit, state }) {
+      if (!state.photos.length) {
+        let photos = await call.fetchRandomPhotos();
+        commit('setPhotos', photos);
+      }
     },
-    setWeather(context, weather) {
-      context.commit('setWeather', weather);
+    setWeather({ commit, state }) {
+      if (!state.weather) {
+        navigator.geolocation.getCurrentPosition(async location => {
+          const { latitude, longitude } = location.coords;
+          let weather = await call.fetchWeather(latitude, longitude);
+          commit('setWeather', weather);
+        });
+      }
     },
-    setNews(context, news) {
-      context.commit('setNews', news);
+    async setNews({ commit, state }) {
+      if (!state.news) {
+        let news = await call.fetchNews();
+        commit('setNews', news);
+      }
     },
     addTodo(context, todo) {
       context.commit('addTodo', todo);
