@@ -2,21 +2,15 @@ import * as scrape from './helpers';
 
 export const fetchRandomPhotos = async () => {
   const url = `https://weatherlee-server.herokuapp.com/api/pixabay?q=nature&category=nature`;
-  let response = await fetch(url);
-  let result = await response.json();
-  return scrape.scrapePhotos(result);
+  return scrape.scrapePhotos(await (await fetch(url)).json());
 };
 
 export const fetchWeather = async (lat, lng) => {
   const url = `https://weatherlee-server.herokuapp.com/api/darksky?latitude=${lat}&longitude=${lng}`;
-  const response = await fetch(url, null);
-  const result = await response.json();
-  return scrape.scrapeWeather(result);
+  return scrape.scrapeWeather(await (await fetch(url, null)).json());
 };
 
 export const fetchNews = async () => {
   const url = `https://weatherlee-server.herokuapp.com/api/news`;
-  const response = await fetch(url);
-  const result = await response.json();
-  return scrape.scrapeNews(result);
+  return scrape.scrapeNews(await (await fetch(url)).json());
 };
