@@ -6,6 +6,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     photos: [],
+    weather: null,
+    news: null,
     todos: [],
     links: []
   },
