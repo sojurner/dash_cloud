@@ -15,15 +15,14 @@
 export default {
   name: "newsfeed",
   computed: {
+    //Accessing Getters
     newsFeed() {
-      return this.$store.state.news;
+      return this.$store.getters.newsStories;
     }
   }
 };
 </script>
 
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .news-container {
   position: fixed;
