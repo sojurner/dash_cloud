@@ -32,7 +32,6 @@ export default new Vuex.Store({
         if (a[category] < b[category]) {
           return -1;
         }
-
         return 0;
       });
     },
@@ -44,7 +43,6 @@ export default new Vuex.Store({
         if (a[category] < b[category]) {
           return 1;
         }
-
         return 0;
       });
     },
@@ -58,6 +56,12 @@ export default new Vuex.Store({
   actions: {
     setPhotos(context, photos) {
       context.commit('setPhotos', photos);
+    },
+    setWeather(context, weather) {
+      context.commit('setWeather', weather);
+    },
+    setNews(context, news) {
+      context.commit('setNews', news);
     },
     addTodo(context, todo) {
       context.commit('addTodo', todo);
