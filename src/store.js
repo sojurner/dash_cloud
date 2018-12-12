@@ -10,7 +10,8 @@ export default new Vuex.Store({
     weather: null,
     news: null,
     todos: [],
-    links: []
+    links: [],
+    activeTab: 'Overview'
   },
   getters: {
     newsStories: state => {
@@ -57,6 +58,9 @@ export default new Vuex.Store({
     },
     removeLink(state, id) {
       state.links = state.links.filter(link => link.id !== id);
+    },
+    toggleActiveTab(state, tab) {
+      state.activeTab = tab;
     }
   },
   actions: {
@@ -95,6 +99,9 @@ export default new Vuex.Store({
     },
     removeLink({ commit }, id) {
       commit('removeLink', id);
+    },
+    toggleActiveTab({ commit }, tab) {
+      commit('toggleActiveTab', tab);
     }
   }
 });
