@@ -1,19 +1,23 @@
 <template>
   <div class="img-container">
-    <div class="img-wrapper" v-for="image in imageDisplay">
+    <div class="img-wrapper" v-for="image in photos">
       <img :src="image" alt="unsplash images">
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "gallery",
-  computed: {
+  //Wrapping store around computed object
+  computed: mapState({
+    photos: state => state.photos,
     imageDisplay() {
       return this.$store.state.photos;
     }
-  }
+  })
 };
 </script>
 
