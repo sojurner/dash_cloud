@@ -5,7 +5,8 @@
     </div>
     <Overview v-if="activeTab==='Overview'"/>
     <Gallery/>
-    <Weather/>
+    <HomeNav :displayMenu="displayMenu"/>
+    <footer>Scroll --></footer>
   </div>
 </template>
 
