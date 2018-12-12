@@ -1,34 +1,31 @@
 # Dash Cloud
 
+[Live](https://dash-cloud.netlify.com/)
+
+- Dash cloud is an all in one dashboard.  
+- Check the latest top Headlines in news and also current weather information.  
+- In addition, track your productivity by adding todos, and bookmarking links.  
+
+## Technologies 
+- Vue.js
+- Vuex
+
+## APIs 
+- Pixabay
+- Darksky
+- News 
+
 ## Project setup
-```
-npm install
-```
+Clone down this [repo](https://github.com/sojurner/dash_cloud)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Install dependencies - `npm install`
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Run server - `npm run serve`
 
-### Run your tests
-```
-npm run test
-```
+Visit [localhost:8080](http://localhost:8080/) in your browser
 
-### Lints and fixes files
-```
-npm run lint
-```
+Compile for Production = `npm run build`
 
-### Run your unit tests
-```
-npm run test:unit
-```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
