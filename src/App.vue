@@ -54,6 +54,7 @@ export default {
 h3,
 h4 {
   color: white;
+  margin: 0.7rem 0;
 }
 
 nav {
@@ -84,5 +85,12 @@ nav {
 body {
   margin: 0;
   background-color: #2c3e50;
+}
+
+body html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
 }
 </style>
