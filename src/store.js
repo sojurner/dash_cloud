@@ -11,6 +11,11 @@ export default new Vuex.Store({
     todos: [],
     links: []
   },
+  getters: {
+    newsStories: state => {
+      return state.news;
+    }
+  },
   mutations: {
     setPhotos(state, photos) {
       state.photos = [...photos];
