@@ -1,11 +1,14 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/work">Work</router-link>
+      <nav>
+        <router-link to="/">Home</router-link>|
+        <router-link to="/work">Work</router-link>
+      </nav>
+      <h1>Welcome</h1>
       <div class="time">
-        <h3>{{time.slice(0,time.indexOf(','))}}</h3>
-        <h4>{{time.slice(time.indexOf(',') + 1)}}</h4>
+        <h3>{{date}}</h3>
+        <h4>{{time}}</h4>
       </div>
     </div>
     <router-view/>
@@ -19,12 +22,15 @@ import { setTimeout, setInterval } from "timers";
 export default {
   data() {
     return {
+      date: null,
       time: null
     };
   },
   mounted() {
     setInterval(() => {
-      this.time = moment().format("MMM Do, h:mm:ss a");
+      let timeDate = moment().format("MMM Do, h:mm:ss a");
+      this.date = timeDate.slice(0, timeDate.indexOf(","));
+      this.time = timeDate.slice(timeDate.indexOf(",") + 1);
     }, 1000);
   }
 };
@@ -50,11 +56,20 @@ h4 {
   color: white;
 }
 
+nav {
+  align-self: center;
+}
+
+#nav {
+  display: flex;
+}
+
 #nav a {
   font-weight: bold;
   color: #aca9a9;
   text-decoration-line: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin: 1rem;
 }
 
 #nav a:hover {
