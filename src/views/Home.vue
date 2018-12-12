@@ -1,6 +1,9 @@
 <template>
   <div class="home">
-    <Newsfeed/>
+    <div class="hamburger-wrapper" :class="{'menu-active': displayMenu}" @click="toggleMenu">
+      <div class="hamburger"/>
+    </div>
+    <Overview v-if="activeTab==='Overview'"/>
     <Gallery/>
     <Weather/>
   </div>
