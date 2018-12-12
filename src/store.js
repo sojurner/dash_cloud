@@ -13,7 +13,13 @@ export default new Vuex.Store({
   },
   mutations: {
     setPhotos(state, photos) {
-      state.photos = [...state.photos, photos];
+      state.photos = [...photos];
+    },
+    setWeather(state, weather) {
+      state.weather = weather;
+    },
+    setNews(state, news) {
+      state.news = news;
     },
     addTodo(state, todo) {
       state.todos = [...state.todos, todo];
