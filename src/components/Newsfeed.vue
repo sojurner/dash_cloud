@@ -4,7 +4,12 @@
     <section class="news-card" v-for="news in newsFeed">
       <img class="news-img" :src="news.urlToImage" alt>
       <div class="news-content">
-        <a class="news-title" :href="news.url">{{news.title}}</a>
+        <a
+          class="news-title"
+          target="_blank"
+          rel="noopener noreferrer"
+          :href="news.url"
+        >{{news.title}}</a>
         <p class="news-src">{{news.src}}</p>
       </div>
     </section>
@@ -34,7 +39,7 @@ export default {
   border: 6px solid rgb(89, 112, 120);
   background-color: rgb(37, 53, 58);
   border-radius: 0.5rem;
-  z-index: 1;
+  z-index: 2;
   opacity: 0.8;
 }
 
